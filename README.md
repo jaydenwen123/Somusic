@@ -1,0 +1,2 @@
+# Somusic
+this is the command line music downloader,which contains lots of function such as search song and mv from kugou website、download song and mv with single or batch.、list search songs or mvs、show download songs or mvs .above functions have matching command.you can use help or h to find doc. finally there left a function that is  play music and play mv.i will complete this function in the near future.
