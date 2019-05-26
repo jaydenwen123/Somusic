@@ -112,7 +112,7 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 >![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv2.png)
 >command:`gmv 1-5`(小幸运)
 >![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv小幸运.png)
->![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gsong 小幸运.png)
+>![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv小幸运2.png)
 
 7.**show the local downloaded songs.**
 
