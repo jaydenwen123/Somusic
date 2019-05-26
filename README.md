@@ -43,7 +43,9 @@ Now this will retrieve the project to your local directory, you can start your t
 
 
 2.the following is the  picture of help document,which is runned int the goland ide.
-![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/kugou/picture/help.png)
+![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help1.png)
+![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help2.png)
+![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help3.png)
 
 ## Usages ##
 In this section. I will use the search song keyword:`极致纯电音` and the search mv keyword :`三寸天堂` as the example to show how to use the somusic program.  
