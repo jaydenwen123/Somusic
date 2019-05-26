@@ -1,5 +1,23 @@
-# Somusic
-this is the command line music downloader,which contains lots of function such as search song and mv from kugou website、download song and mv with single or batch.、list search songs or mvs、show download songs or mvs .above functions have matching command.you can use help or h to find doc. finally there left a function that is  play music and play mv.i will complete this function in the near future.
+# Somusic #
+This is the command line music downloader,which contains lots of functions such as search song and mv from kugou website、download song and mv with single or batch.、list search songs or mvs、show download songs or mvs .Above functions have matching commands.You can use help or h to find doc.Finally there left a function that is  play music and play mv.I will complete this function in the near future.
+
+## Who Should See This Project? ##
+
+- If you want to learn golang quickly  with a practical project;
+- If you want to get a better understand about how  the command line software is runned;
+- If you want to enter the Network Spider World quickly;
+- If you are interested in the music website,and you want to build yourself music player;
+- this project is absolutely nice for you.
+
+
+## What Can You Get? ##
+1. Spider the Kugou Music Website by Golang language.
+2. Concurrnet download the file(including not only mp3 file and mp4 file,but also binary files and text files.) by Golang  goroutine and Channel. 
+3. Master skills of JSON and Golang struct、 interface、http、regexp and Golang basic knowledge.
+4. Practice to use the famous librarys such as:goquery、gjson...
+5. Understand how the command line tool is working. Such as windows cmd、Golang Web Framework  beego's bee tool.
+6. Analysis the Http's Interface about Kugou Music Website.
+7. Get the skill of Spider by Golang. 
 
 # Getting Started #
 
@@ -116,6 +134,7 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 
 >command: `mvpath`
 >![mvpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/mvpath.png)
+>
 
 11.**change the saved download mvs' directory.**
 
@@ -155,8 +174,27 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 >![cls](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/cls.png)
 
 
+# Reference #
+1. gjson(https://github.com/tidwall/gjson)
+2. goquery(https://github.com/PuerkitoBio/goquery)
+3. gorm(https://github.com/jinzhu/gorm)
+4. beego orm(https://github.com/astaxie/beego/orm)
+5. beego logs(https://github.com/astaxie/beego/logs)
+6. regexp standard library(https://studygolang.com/pkgdoc)
+7. net/http standard library(https://studygolang.com/pkgdoc)
+8. channel&goroutine(https://gobyexample.com)
 
+# What's need to Improve #
 
+- 1.play song or play mv in reality.
+- 2.config the variables into the file.such as save download song directory and mv directory,software command line style and delimiter.
+- 3.add the cache module.which can improve the somusic's performance.
+
+# Contace Me #
+If you are interested in this project、 like coding or any questions,you can contact with me by following ways.
+> QQ:2282186474
+> WeChat:wen2282186474
+> Eamil: 2282186474@qq.com 
 
 
 
