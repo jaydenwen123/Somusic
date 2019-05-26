@@ -48,58 +48,111 @@ Now this will retrieve the project to your local directory, you can start your t
 ![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help3.png)
 
 ## Usages ##
-In this section. I will use the search song keyword:`极致纯电音` and the search mv keyword :`三寸天堂` as the example to show how to use the somusic program.  
+In this section. I will use the search song keyword:`bigbig` and `天使的翅膀`, and the search mv keyword :`Falling Down` and `小幸运` as the example to show how to use the somusic program.  
 
-1. **search song with keyword.**
+1.**search song with keyword.**
 
+>command: `qsong bigbig`(bigbig)
+>![qsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qsong.png)
+>command: `qsong 天使的翅膀`(天使的翅膀)
+>![qsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qsong天使的翅膀.png)
 
-2. **search mv with keyword.**
+2.**search mv with keyword.**
 
-
-3. **list the searched song information.**
-
-
-4. **list the searched mv informtion.**
-
-
-5. **download the searched song.**
-
-
-6. **download the searched mv.**
+>command: `qmv falling down`(falling down)
+>![qmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qmv.png)
+>command: `qmv 小幸运`(小幸运)
+>![qmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qmv小幸运.png)
 
 
-7. **show the local downloaded songs.**
+3.**list the searched song information.**
 
+>command: `lsong`(小幸运)
+>![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong.png)
+>command: `lsong 11`(big big world)
+>![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong2.png)
+>command: `lsong `(天使的翅膀)
+>![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong天使的翅膀.png)
 
-8. **show the local donwloaded mvs.**
+4.**list the searched mv informtion.**
 
+>command: `lmv`(Falling Down)
+>![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv.png)
+>![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv2.png)
+>command:`lmv`(小幸运)
+>![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv小幸运.png)
 
-9. **show the current saved download songs' directory.**
+5.**download the searched song.**
 
+>command: `gsong 3,6`(big big world)
+>![gsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gsong.png)
 
-10. **show the current saved download mvs' directory.**
+6.**download the searched mv.**
 
+>command: `gmv 1-10`(Falling Down)
+>![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv.png)
+>![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv2.png)
+>command:`gmv 1-5`(小幸运)
+>![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv小幸运.png)
+>![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gsong小幸运.png)
 
-11. **change the saved download mvs' directory.**
+7.**show the local downloaded songs.**
 
+>command: `ssong`
+>![ssong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/ssong .png)
+>![ssong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/ssong.png)
 
-12. **change the saved download mvs' directory.**
+8.**show the local donwloaded mvs.**
 
+>command: `smv`
+>![smv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/smv.png)
 
-13. **change the program command line style.**
+9.**show the current saved download songs' directory.**
 
+>command: `songpath`
+>![songpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/songpath.png)
 
-14. **change the program command line delimiter.**
+10.**show the current saved download mvs' directory.**
 
+>command: `mvpath`
+>![mvpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/mvpath.png)
 
-15. **show or find the help document.**
+11.**change the saved download mvs' directory.**
 
+>command: `chmvpath D:\歌曲`
+>![chmvpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/chmvpath.png)
 
-16. **quit or exit the program.**
+12.**change the saved download mvs' directory.**
 
+>command: `chsongpath D:\歌曲`
+>![chsongpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/chsongpath.png)
 
-17. **clear the log information.**
+13.**change the program command line style.**
 
+>command: `style mimusic`
+>![style](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/style.png)
+
+14.**change the program command line delimiter.**
+
+>command: `delimiter #`
+>![delimiter](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/delimiter.png)
+
+15.**show or find the help document.**
+
+>command: `help`
+>![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help1.png)
+>![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help2.png)
+>![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help3.png)
+
+16.**quit or exit the program.**
+
+>command: `exit`
+>![quit](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/exit.png)
+
+17.**clear the log information.**
+
+>command: `cls`
+>![cls](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/cls.png)
 
 
 
