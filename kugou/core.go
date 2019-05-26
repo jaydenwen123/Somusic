@@ -26,7 +26,6 @@ const (
 	PATH_SONG   = "songpath"
 	CHANGE_PATH_MV = "chmvpath"
 	CHANGE_PATH_SONG   = "chsongpath"
-
 	CHSTYLE   = "chstyle"
 	STYLE   = "style"
 	CHDELIMITER   = "chdelimiter"
