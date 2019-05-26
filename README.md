@@ -12,19 +12,19 @@ This is the command line music downloader,which contains lots of functions such 
 
 ## What Can You Get? ##
 1. Spider the Kugou Music Website by Golang language.
-2. Concurrnet download the file(including not only mp3 file and mp4 file,but also binary files and text files.) by Golang  goroutine and Channel. 
+2. Concurrnet download the file(including not only mp3 file and mp4 file,but also binary files and text files.) by Golang  goroutine and Channel.
 3. Master skills of JSON and Golang struct、 interface、http、regexp and Golang basic knowledge.
 4. Practice to use the famous librarys such as:goquery、gjson...
 5. Understand how the command line tool is working. Such as windows cmd、Golang Web Framework  beego's bee tool.
 6. Analysis the Http's Interface about Kugou Music Website.
-7. Get the skill of Spider by Golang. 
+7. Get the skill of Spider by Golang.
 
 # Getting Started #
 
 ## Installing ##
 
 >  1. create a directory which is used to store the project.for example: `cd d:\golang\workspace\.`
->  2. you should execute this command `git clone https://github.com/wenxiaofeiCode/Somusic.git`
+>  2. you should execute this command `git clone https://github.com/jaydenwen123/Somusic.git`
 >  3. if you want to move this project into %gopath%,then you can move it to your gopath's src directory.
 
 Now this will retrieve the project to your local directory, you can start your travel.
@@ -34,7 +34,7 @@ Now this will retrieve the project to your local directory, you can start your t
 1.the somusic support many functions which also can match  with  it's  command. there are all supported functions listed in the table.
 
 | Command | Parameter |		Function 	|	Description |
-|:---------:|:------------|:------------|:--------------| 
+|:---------:|:------------|:------------|:--------------|
 | gboard |no paramter | download rank board | download the kugou rank board all song |
 | lsong | [max songid] or <start-end> | list searched songs | show the asc range musics list(note:the shown songs is not downloaded) |
 | lmv | [max mvid] or <first-end> | list searched mvs |	show the asc range mv list,it's also like lsong. |
@@ -61,117 +61,117 @@ Now this will retrieve the project to your local directory, you can start your t
 
 
 2.the following is the  picture of help document,which is runned int the goland ide.
-![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help1.png)
-![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help2.png)
-![help document](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help3.png)
+![help document](https://github.com/jaydenwen123/Somusic/blob/master/usages/help1.png)
+![help document](https://github.com/jaydenwen123/Somusic/blob/master/usages/help2.png)
+![help document](https://github.com/jaydenwen123/Somusic/blob/master/usages/help3.png)
 
 ## Usages ##
-In this section. I will use the search song keyword:`bigbig` and `天使的翅膀`, and the search mv keyword :`Falling Down` and `小幸运` as the example to show how to use the somusic program.  
+In this section. I will use the search song keyword:`bigbig` and `天使的翅膀`, and the search mv keyword :`Falling Down` and `小幸运` as the example to show how to use the somusic program.
 
 1.**search song with keyword.**
 
 >command: `qsong bigbig`(bigbig)
->![qsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qsong.png)
+>![qsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/qsong.png)
 >command: `qsong 天使的翅膀`(天使的翅膀)
->![qsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qsong天使的翅膀.png)
+>![qsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/qsong天使的翅膀.png)
 
 2.**search mv with keyword.**
 
 >command: `qmv falling down`(falling down)
->![qmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qmv.png)
+>![qmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/qmv.png)
 >command: `qmv 小幸运`(小幸运)
->![qmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/qmv小幸运.png)
+>![qmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/qmv小幸运.png)
 
 
 3.**list the searched song information.**
 
 >command: `lsong`(小幸运)
->![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong.png)
+>![lsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/lsong.png)
 >command: `lsong 11`(big big world)
->![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong2.png)
+>![lsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/lsong2.png)
 >command: `lsong `(天使的翅膀)
->![lsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lsong天使的翅膀.png)
+>![lsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/lsong天使的翅膀.png)
 
 4.**list the searched mv informtion.**
 
 >command: `lmv`(Falling Down)
->![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv.png)
->![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv2.png)
+>![lmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/lmv.png)
+>![lmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/lmv2.png)
 >command:`lmv`(小幸运)
->![lmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/lmv小幸运.png)
+>![lmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/lmv小幸运.png)
 
 5.**download the searched song.**
 
 >command: `gsong 3,6`(big big world)
->![gsong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gsong.png)
+>![gsong](https://github.com/jaydenwen123/Somusic/blob/master/usages/gsong.png)
 
 6.**download the searched mv.**
 
 >command: `gmv 1-10`(Falling Down)
->![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv.png)
->![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv2.png)
+>![gmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/gmv.png)
+>![gmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/gmv2.png)
 >command:`gmv 1-5`(小幸运)
->![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv小幸运.png)
->![gmv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/gmv小幸运2.png)
+>![gmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/gmv小幸运.png)
+>![gmv](https://github.com/jaydenwen123/Somusic/blob/master/usages/gmv小幸运2.png)
 
 7.**show the local downloaded songs.**
 
 >command: `ssong`
->![ssong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/ssong .png)
->![ssong](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/ssong.png)
+>![ssong](https://github.com/jaydenwen123/Somusic/blob/master/usages/ssong .png)
+>![ssong](https://github.com/jaydenwen123/Somusic/blob/master/usages/ssong.png)
 
 8.**show the local donwloaded mvs.**
 
 >command: `smv`
->![smv](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/smv.png)
+>![smv](https://github.com/jaydenwen123/Somusic/blob/master/usages/smv.png)
 
 9.**show the current saved download songs' directory.**
 
 >command: `songpath`
->![songpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/songpath.png)
+>![songpath](https://github.com/jaydenwen123/Somusic/blob/master/usages/songpath.png)
 
 10.**show the current saved download mvs' directory.**
 
 >command: `mvpath`
->![mvpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/mvpath.png)
+>![mvpath](https://github.com/jaydenwen123/Somusic/blob/master/usages/mvpath.png)
 >
 
 11.**change the saved download mvs' directory.**
 
 >command: `chmvpath D:\歌曲`
->![chmvpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/chmvpath.png)
+>![chmvpath](https://github.com/jaydenwen123/Somusic/blob/master/usages/chmvpath.png)
 
 12.**change the saved download mvs' directory.**
 
 >command: `chsongpath D:\歌曲`
->![chsongpath](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/chsongpath.png)
+>![chsongpath](https://github.com/jaydenwen123/Somusic/blob/master/usages/chsongpath.png)
 
 13.**change the program command line style.**
 
 >command: `style mimusic`
->![style](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/style.png)
+>![style](https://github.com/jaydenwen123/Somusic/blob/master/usages/style.png)
 
 14.**change the program command line delimiter.**
 
 >command: `delimiter #`
->![delimiter](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/delimiter.png)
+>![delimiter](https://github.com/jaydenwen123/Somusic/blob/master/usages/delimiter.png)
 
 15.**show or find the help document.**
 
 >command: `help`
->![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help1.png)
->![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help2.png)
->![help](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/help3.png)
+>![help](https://github.com/jaydenwen123/Somusic/blob/master/usages/help1.png)
+>![help](https://github.com/jaydenwen123/Somusic/blob/master/usages/help2.png)
+>![help](https://github.com/jaydenwen123/Somusic/blob/master/usages/help3.png)
 
 16.**quit or exit the program.**
 
 >command: `exit`
->![quit](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/exit.png)
+>![quit](https://github.com/jaydenwen123/Somusic/blob/master/usages/exit.png)
 
 17.**clear the log information.**
 
 >command: `cls`
->![cls](https://github.com/wenxiaofeiCode/Somusic/blob/master/usages/cls.png)
+>![cls](https://github.com/jaydenwen123/Somusic/blob/master/usages/cls.png)
 
 
 # Reference #
@@ -193,10 +193,10 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 # Contace Me #
 If you are interested in this project、 like coding or any questions,you can contact with me by following ways.
 > QQ:2282186474
-> 
+>
 > WeChat:wen2282186474
-> 
-> Eamil: 2282186474@qq.com 
+>
+> Eamil: 2282186474@qq.com
 
 
 
