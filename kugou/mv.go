@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"github.com/astaxie/beego/logs"
 	"github.com/tidwall/gjson"
-	"path"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -87,7 +87,7 @@ func DownloadSearchMV()  {
 	logs.Info("正在搜索数据中，请耐心等待.....")
 	searchInfos = common.RequestJsonWithRetry(searchUrl, HEADER)
 	//初始化保存歌曲目录
-	saveBasePath := path.Join(downloadSaveMVDir, keyword)
+	saveBasePath := downloadSaveMVDir+keyword
 	logs.Info("正在初始化目录,请等待......")
 	//initSaveDir(saveBasePath)
 	util.InitDir(saveBasePath)
@@ -105,12 +105,12 @@ func DownloadSearchMV()  {
 		parsed := make(chan bool)
 		go func(done chan bool) {
 			mvInfos= ParseMVInfo(searchInfos)
-			util.Save2JsonFile(mvInfos, saveBasePath+"/mv.json")
+			util.Save2JsonFile(mvInfos, saveBasePath+string(os.PathSeparator)+"mv.json")
 			done <- true
 		}(parsed)
 
 		//保存json数据到文件中
-		filePath := saveBasePath + "/data.json"
+		filePath := saveBasePath +string(os.PathSeparator) +"data.json"
 		util.SaveJsonStr2File(searchInfos, filePath)
 		<-parsed
 		logs.Info("解析歌曲数据完毕.......")

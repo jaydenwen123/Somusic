@@ -15,13 +15,12 @@ var	(
 
 //定义保存歌曲的目录
 var (
-	boardSaveDir="F:/Program Files/go/workspace/src/Somusic/kugou/board/"
-	likeSaveDir="F:/Program Files/go/workspace/src/Somusic/kugou/like/"
-	downloadSaveSongDir="F:/Program Files/go/workspace/src/Somusic/kugou/download/song/"
-	downloadSaveMVDir="F:/Program Files/go/workspace/src/Somusic/kugou/download/mv/"
-	downloadSaveSongDirDefault="F:/Program Files/go/workspace/src/Somusic/kugou/download/song/"
-	downloadSaveMVDirDefault="F:/Program Files/go/workspace/src/Somusic/kugou/download/mv/"
-	//F:/Program Files/go/workspace/src/Somusic/kugou/download/song
+	boardSaveDir=`D:\Somusic\board\`
+	likeSaveDir=`D:\Somusic\like\`
+	downloadSaveSongDir=`D:\Somusic\download\song\`
+	downloadSaveMVDir=`D:\Somusic\download\mv\`
+	downloadSaveSongDirDefault=`D:\Somusic\download\song\`
+	downloadSaveMVDirDefault=`D:\Somusic\download\mv\`
 )
 
 //定义通用的url
@@ -63,12 +62,12 @@ const (
 	SONG_NAME_PATH="data.audio_name"
 	IMG_URL_PATH="data.img"
 	PLAY_URL_PATH="data.play_url"
-
-
+	
 )
 
 
 //定义下载搜索歌曲用的信息
 var  (
 	downloadMaxCount=20
+	defaultListCount=5
 )

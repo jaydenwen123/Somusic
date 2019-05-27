@@ -46,6 +46,7 @@ func DispatcherOperation() {
 	var operation []byte
 	var err error
 	ShowHelp()
+	ShowBaseInfo()
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Printf("%s%s",style,delimiter)
@@ -55,6 +56,15 @@ func DispatcherOperation() {
 		}
 		HandleOperation(string(operation))
 	}
+}
+//实现给用户最基本的信息，比如保存歌曲的路径、保存MV的路径
+func ShowBaseInfo() {
+	fmt.Println("Note:")
+	fmt.Println("\tcurrent  default downloaded songs directory: [",downloadSaveSongDir,"]")
+	fmt.Println("\tcurrent  default downloaded mvs directory: [",downloadSaveSongDir,"]")
+	fmt.Println("If you want to change the directory,you can use the chsongpath and chmvpath command \n" +
+		"to change your favorite directory.")
+
 }
 
 
@@ -88,11 +98,11 @@ func HandleOperation(operation string) {
 		case "clear":
 			clearLog()
 		case LIST_SONG:
-			cmd.Arguement = "1-5"
+			cmd.Arguement=GenerateDefaultListRange("song")
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListSong(cmd)
 		case LIST_MV:
-			cmd.Arguement = "1-5"
+			cmd.Arguement=GenerateDefaultListRange("mv")
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListMV(cmd)
 		case SHOW_SONG:
@@ -124,19 +134,12 @@ func HandleOperation(operation string) {
 			//准备参数
 			mp.SearchSong(cmd)
 		case LIST_MV:
-			if len(cmd.Arguement)==0{
-				cmd.Arguement="5"
-			}
-			//准备参数
-			cmd.Arguement = "1-" + cmd.Arguement
+			cmd.Arguement=GenerateDefaultListRange("mv")
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListMV(cmd)
 		case LIST_SONG:
 			//准备参数
-			if len(cmd.Arguement)==0{
-				cmd.Arguement="5"
-			}
-			cmd.Arguement = "1-" + cmd.Arguement
+			cmd.Arguement=GenerateDefaultListRange("song")
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListSong(cmd)
 		case PLAY_MV:
@@ -174,13 +177,13 @@ func HandleOperation(operation string) {
 			}
 			mp.DownloadMV(cmd)
 		case DELIMITER:
-			delimiter=op[1]
+			delimiter = op[1]
 		case CHDELIMITER:
-			delimiter=op[1]
+			delimiter = op[1]
 		case STYLE:
-			style=op[1]
+			style = op[1]
 		case CHSTYLE:
-			style=op[1]
+			style = op[1]
 		case CHANGE_PATH_SONG:
 			mp.ChangeSongPath(cmd)
 		case CHANGE_PATH_MV:
@@ -190,6 +193,24 @@ func HandleOperation(operation string) {
 			//ShowHelp()
 		}
 	}
+}
+
+func GenerateDefaultListRange(typ string) string {
+	listRange := "1-"
+	if typ=="song" {
+		if len(songInfos) <= defaultListCount {
+			listRange = listRange + strconv.Itoa(len(songInfos))
+		} else {
+			listRange = listRange + strconv.Itoa(defaultListCount)
+		}
+	}else if typ=="mv" {
+		if len(mvInfos) <= defaultListCount {
+			listRange = listRange + strconv.Itoa(len(mvInfos))
+		} else {
+			listRange = listRange + strconv.Itoa(defaultListCount)
+		}
+	}
+	return listRange
 }
 //检查输入的命令后的参数是否为空
 func checkIsNull(arg string) bool{

@@ -10,6 +10,7 @@ func ShowHelp() {
 	//3.播放歌曲
 	//4.查看帮助文档
 	//5.退出程序
+	fmt.Println("###################################Somusic###################################")
 	fmt.Println("here is the usage of  ",style,":")
 	fmt.Println("\t<gboard> \n\t\t:means download the kugou rank board all song. ")
 	fmt.Println("\t<lsong> <first-end>\n\t\t:means show the asc range musics list ")
@@ -32,4 +33,5 @@ func ShowHelp() {
 	fmt.Println("\t<quit> or CTRL+C:\n\t\tmeans to quit the program...")
 	fmt.Println("\t<exit> or CTRL+C:\n\t\tmeans to exit the program...")
 	fmt.Println("\t<cls> or <clear>:\n\t\tmeans to clear the log info...")
+	fmt.Println("#############################################################################")
 }

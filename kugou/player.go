@@ -74,11 +74,15 @@ func (p *MusicPlayer) ChangeSongPath(cmd *Command) {
 		downloadSaveSongDir=downloadSaveSongDirDefault
 		return
 	}
+
 	//校验目录是否正确
-	if err := util.InitDir(newPath+"/"+keyword);err==nil{
+	if !strings.HasSuffix(newPath,string(os.PathSeparator)){
+		newPath=newPath+string(os.PathSeparator)
+	}
+	if err := util.InitDir(newPath+keyword);err==nil{
 		fmt.Println("初始化新目录完毕....")
 		downloadSaveSongDir,_=filepath.Abs(newPath)
-		downloadSaveSongDir=downloadSaveSongDir+"/"
+		downloadSaveSongDir=downloadSaveSongDir+string(os.PathSeparator)
 	}
 }
 
@@ -91,10 +95,13 @@ func (p *MusicPlayer) ChangeMVPath(cmd *Command) {
 	}
 
 	//校验目录是否正确
-	if err := util.InitDir(newPath+"/"+keyword);err==nil{
+	if !strings.HasSuffix(newPath,string(os.PathSeparator)){
+		newPath=newPath+string(os.PathSeparator)
+	}
+	if err := util.InitDir(newPath+keyword);err==nil{
 		fmt.Println("初始化新目录完毕....")
 		downloadSaveMVDir,_=filepath.Abs(newPath)
-		downloadSaveMVDir=downloadSaveMVDir+"/"
+		downloadSaveMVDir=downloadSaveMVDir+string(os.PathSeparator)
 	}
 }
 
@@ -326,7 +333,7 @@ func  ListDownload(dirPath string) {
 				if strings.HasSuffix(file.Name(),".mp3"){
 					fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
 					downloadSongInfos = append(downloadSongInfos, &SongInfo{
-						FileId:   strconv.Itoa(id),
+						FileId:   strconv.Itoa(id+1),
 						Name:     file.Name(),
 						FileSize: fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))) + "M",
 					})
@@ -342,7 +349,7 @@ func  ListDownload(dirPath string) {
 						if strings.HasSuffix(fileinfo.Name(),".mp3"){
 							fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))), "M\t\t", fileinfo.Name())
 							downloadSongInfos = append(downloadSongInfos, &SongInfo{
-								FileId:   strconv.Itoa(id),
+								FileId:   strconv.Itoa(id+1),
 								Name:     fileinfo.Name(),
 								FileSize: fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))) + "M",
 							})
