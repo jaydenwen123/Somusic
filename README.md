@@ -1,4 +1,7 @@
 # Somusic #
+
+Somusic中文版文档:[https://github.com/jaydenwen123/Somusic/blob/master/zh_README.md](https://github.com/jaydenwen123/Somusic/blob/master/zh_README.md "Somusic中文版文档")
+
 This is the command line music downloader,which contains lots of functions such as search song and mv from kugou website、download song and mv with single or batch.、list search songs or mvs、show download songs or mvs .Above functions have matching commands.You can use help or h to find doc.Finally there left a function that is  play music and play mv.I will complete this function in the near future.
 
 ## Who Should See This Project? ##
