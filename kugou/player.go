@@ -325,7 +325,7 @@ func  ListDownload(dirPath string) {
 		fmt.Println("暂时无法读取到下载的歌曲或者MV信息，请稍后重试...")
 		return
 	}
-	id:=0
+	id:=1
 	if dirPath==downloadSaveSongDir{
 		fmt.Println("歌曲编号\t\t歌曲大小\t\t歌曲名称")
 		for _, file := range files {
@@ -333,7 +333,7 @@ func  ListDownload(dirPath string) {
 				if strings.HasSuffix(file.Name(),".mp3"){
 					fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))), "M\t\t", file.Name())
 					downloadSongInfos = append(downloadSongInfos, &SongInfo{
-						FileId:   strconv.Itoa(id+1),
+						FileId:   strconv.Itoa(id),
 						Name:     file.Name(),
 						FileSize: fmt.Sprintf("%.2f", (float64(file.Size()) / float64(1024*1024))) + "M",
 					})
@@ -349,7 +349,7 @@ func  ListDownload(dirPath string) {
 						if strings.HasSuffix(fileinfo.Name(),".mp3"){
 							fmt.Println("   ", id, "\t\t\t", fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))), "M\t\t", fileinfo.Name())
 							downloadSongInfos = append(downloadSongInfos, &SongInfo{
-								FileId:   strconv.Itoa(id+1),
+								FileId:   strconv.Itoa(id),
 								Name:     fileinfo.Name(),
 								FileSize: fmt.Sprintf("%.2f", (float64(fileinfo.Size()) / float64(1024*1024))) + "M",
 							})
