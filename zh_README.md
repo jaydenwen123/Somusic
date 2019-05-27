@@ -1,7 +1,15 @@
 # Somusic #
+
+Somusic下载地址：[Somusic下载地址](https://github.com/jaydenwen123/Somusic/raw/master/somusic.exe "Somusic下载地址")
+
+Somusic英文版文档:[Somusic英文版文档](https://github.com/jaydenwen123/Somusic/blob/master/README.md "Somusic英文版文档")
+
+
+
 >Github项目地址：https://github.com/jaydenwen123/Somusic
 >
 >码云项目地址：https://gitee.com/jaydenwen/Somusic
+
 
 这是命令行音乐下载器，它包含许多功能，如来自kugou网站的搜索歌曲和mv，下载歌曲和单个或批量的mv，列表搜索歌曲或mvs，显示下载歌曲或mv。以上功能有匹配的命令 你可以使用帮助或h来找到doc.最后遗留一个播放音乐和播放MV的功能。我将在后续完善这个功能。
 
