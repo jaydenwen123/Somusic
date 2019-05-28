@@ -134,12 +134,19 @@ func HandleOperation(operation string) {
 			//准备参数
 			mp.SearchSong(cmd)
 		case LIST_MV:
-			cmd.Arguement=GenerateDefaultListRange("mv")
+			if len(cmd.Arguement)==0{
+				cmd.Arguement=GenerateDefaultListRange("mv")
+			}
+			cmd.Arguement = "1-" + cmd.Arguement
+			//cmd.Arguement=GenerateDefaultListRange("mv")
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListMV(cmd)
 		case LIST_SONG:
 			//准备参数
-			cmd.Arguement=GenerateDefaultListRange("song")
+			if len(cmd.Arguement)==0{
+				cmd.Arguement=GenerateDefaultListRange("song")
+			}
+			cmd.Arguement = "1-" + cmd.Arguement
 			cmd.Arguements = SplitBlockArguements(cmd.Arguement)
 			mp.ListSong(cmd)
 		case PLAY_MV:
