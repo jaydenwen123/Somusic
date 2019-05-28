@@ -92,6 +92,6 @@ func Download(url string, filename string) error {
 		return err
 	}
 	//解决Golang"Connection reset"&"EOF"问题
-	request.Close=true
+	//request.Close=true
 	return nil
 }

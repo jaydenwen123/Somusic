@@ -165,8 +165,8 @@ func DownloadMusic(hash,savePath string,fileSuffix string,fileIndex int,done cha
 		//DownloadMusic(hash,savePath,done)
 		//return
 	}
-	//3.正式下载
-	err := util.DownloadWithRetry(song.Url, savePath+"/"+song.Name+fileSuffix)
+	//3.正式下载 为了提升用户体验，先不下载重试
+	err := util.Download(song.Url, savePath+"/"+song.Name+fileSuffix)
 	if err!=nil{
 		//logs.Error("歌曲：",song.Name,"下载失败...")
 		done<-DownloadMsg{FileName:song.Name,Success:false,FileId:fileIndex}

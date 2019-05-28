@@ -62,7 +62,11 @@ const (
 	SONG_NAME_PATH="data.audio_name"
 	IMG_URL_PATH="data.img"
 	PLAY_URL_PATH="data.play_url"
-	
+)
+
+const (
+	SONG="song"
+	MV="mv"
 )
 
 

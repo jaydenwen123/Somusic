@@ -154,8 +154,8 @@ func ToDownload(mvDetail *MVDetail, done chan DownloadMsg, mv *MVInfo, fileIndex
 		done <- DownloadMsg{FileName: mv.MVName, FileId: fileIndex, Success: false}
 		return
 	}
-	//3.正式下载
-	err := util.DownloadWithRetry(mvDetail.MVUrl, dirPath+"/"+mv.MVName+suffix)
+	//3.正式下载，提升用户体验，一开始下载失败后不需要重新下载
+	err := util.Download(mvDetail.MVUrl, dirPath+"/"+mv.MVName+suffix)
 	if err != nil {
 		//logs.Error("歌曲：",song.Name,"下载失败...")
 		done <- DownloadMsg{FileName: mv.MVName, Success: false, FileId: fileIndex}

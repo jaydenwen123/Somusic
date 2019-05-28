@@ -228,6 +228,7 @@ func (p *MusicPlayer) PlaySong(cmd *Command) {
 
 func (p *MusicPlayer) DownloadSong(cmd *Command) {
 	//fmt.Printf("%+v\n", cmd)
+	failed:=make([]string,0)
 	cost:=util.NewCost(time.Now())
 	//遍历下载
 	dmsg:=make(chan DownloadMsg)
@@ -257,17 +258,41 @@ func (p *MusicPlayer) DownloadSong(cmd *Command) {
 			download++
 		} else {
 			logs.Error("第  (", downloadInfo.FileId, ")  个歌曲  [", downloadInfo.FileName, "]  ", "下载失败")
+			failed=append(failed,fmt.Sprintf("%d",downloadInfo.FileId))
 		}
 		index--
 	}
 	if hasDownload{
 		logs.Info("指定的歌曲下载完毕，请继续选择操作!!!!")
 		logs.Info("总共下载",downloadCount, "个文件!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", cost.CostWithNowAsString())
+		if len(failed)>0{
+			p.HandleDownloadFailed(failed,SONG)
+		}
 	}
+}
 
+//重新下载失败的歌曲
+func (p *MusicPlayer)HandleDownloadFailed(failed []string,downType string) {
+	var retry string
+	fmt.Printf("是否重新下载失败的歌曲或MV？直接回车即可重新下载，否则输入no即可：")
+	fmt.Scanf("%s\n",&retry)
+	if !(retry=="" || len(strings.TrimSpace(retry))==0){
+		return
+	}
+	switch downType {
+	case SONG:
+		cmd:=NewCommand("gsong",failed)
+		p.DownloadSong(cmd)
+	case MV:
+		cmd:=NewCommand("gmv",failed)
+		p.DownloadMV(cmd)
+	default:
+		logs.Error("there is not supported this operation.")
+	}
 }
 func (p *MusicPlayer) DownloadMV(cmd *Command) {
 	//fmt.Printf("%+v\n", cmd)
+	failed:=make([]string,0)
 	cost:=util.NewCost(time.Now())
 	//遍历下载
 	dmsg:=make(chan DownloadMsg)
@@ -301,12 +326,16 @@ func (p *MusicPlayer) DownloadMV(cmd *Command) {
 			download++
 		} else {
 			logs.Error("第  (", downloadInfo.FileId, ")  个MV  [", downloadInfo.FileName, "]  ", "下载失败")
+			failed=append(failed,fmt.Sprintf("%d",downloadInfo.FileId))
 		}
 		index--
 	}
 	if hasDownload{
 		logs.Info("指定的MV下载完毕，请继续选择操作!!!!")
 		logs.Info("总共下载",downloadCount, "个MV!\t下载成功", download,"个文件\t","下载失败",downloadCount-download,"个文件\t","总耗时为", cost.CostWithNowAsString())
+		if len(failed)>0{
+			p.HandleDownloadFailed(failed,MV)
+		}
 	}
 }
 
