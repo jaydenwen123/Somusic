@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Somusic/kugou"
+	"github.com/jaydenwen123/Somusic/kugou"
 )
 
 func main() {
