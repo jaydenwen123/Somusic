@@ -196,13 +196,5 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 - 2.config the variables into the file.such as save download song directory and mv directory,software command line style and delimiter.
 - 3.add the cache module.which can improve the somusic's performance.
 
-# Contace Me #
-If you are interested in this project、 like coding or any questions,you can contact with me by following ways.
-> QQ:2282186474
->
-> WeChat:wen2282186474
->
-> Eamil: 2282186474@qq.com
-
 
 
