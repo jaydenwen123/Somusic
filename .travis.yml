@@ -4,4 +4,17 @@ go:
   - 1.13.x
 env:
   - GO111MODULE=on
+
 script: go build -v .
+
+before_deploy: make build-all
+
+deploy:
+  provoder: releases
+  api_key: d3c4734ffc3a1c4d673cd40480643754557c53a5
+  file_glob: true
+  file: bin/*
+  skip_cleanup: true
+  on:
+    repo: jaydenwen123/Somusic
+    tags: true
