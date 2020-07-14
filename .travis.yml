@@ -11,7 +11,8 @@ before_deploy: make build-all
 
 deploy:
   provoder: releases
-  api_key: $API_KEY
+  api_key:
+    secure: $API_KEY
   file_glob: true
   file: bin/*
   skip_cleanup: true
