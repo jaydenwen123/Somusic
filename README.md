@@ -4,6 +4,7 @@ Somusic下载地址：[Somusic下载地址](https://github.com/jaydenwen123/Somu
 
 Somusic中文版文档：[Somusic中文版文档](https://github.com/jaydenwen123/Somusic/blob/master/zh_README.md "Somusic中文版文档")
 
+> 此项目全部内容已开源，仅用于学习交流，切勿用于商业用途，否则后果自负
 
 This is the command line music downloader,which contains lots of functions such as search song and mv from kugou website、download song and mv with single or batch.、list search songs or mvs、show download songs or mvs .Above functions have matching commands.You can use help or h to find doc.Finally there left a function that is  play music and play mv.I will complete this function in the near future.
 
@@ -195,14 +196,6 @@ In this section. I will use the search song keyword:`bigbig` and `天使的翅�
 - 1.play song or play mv in reality.
 - 2.config the variables into the file.such as save download song directory and mv directory,software command line style and delimiter.
 - 3.add the cache module.which can improve the somusic's performance.
-
-# Contace Me #
-If you are interested in this project、 like coding or any questions,you can contact with me by following ways.
-> QQ:2282186474
->
-> WeChat:wen2282186474
->
-> Eamil: 2282186474@qq.com
 
 
 
